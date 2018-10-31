@@ -1,0 +1,40 @@
+spring:
+  aop:
+    proxy-target-class: true
+  messages:
+    basename: i18n
+  datasource:
+    name: writedb
+    #url: jdbc:mysql://192.168.12.76:7001/test?useUnicode=true&characterEncoding=utf8&useCursorFetch=true&defaultFetchSize=500&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/goods?useUnicode=true&characterEncoding=utf8&useCursorFetch=true&defaultFetchSize=500&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=false
+#    username: route
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  readdb:
+    name: readdb
+    #url: jdbc:mysql://192.168.12.76:7002/test?useUnicode=true&characterEncoding=utf8&useCursorFetch=true&defaultFetchSize=500&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/goods?useUnicode=true&characterEncoding=utf8&useCursorFetch=true&defaultFetchSize=500&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=false
+    #username: route
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  profiles:
+    active: dev
+  application:
+    name: app
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage:
+hostconf:
+  host: 192.168.12.78
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+
+        include: "*"
+server:
+  port: 8090
