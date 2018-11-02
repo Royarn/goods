@@ -23,7 +23,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: app
+    name: goods
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   typeAliasesPackage:
@@ -40,11 +40,9 @@ server:
   port: 8090
 dubbo:
   application:
-    name: provider
+    name: goods
   protocol:
     name: dubbo
-    port: 20880
+    port: 20882
   registry:
     address: zookeeper://192.168.12.149:2181
-  provider:
-    timeout: 1000
