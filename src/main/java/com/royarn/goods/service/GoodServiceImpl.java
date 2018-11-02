@@ -1,11 +1,11 @@
-package com.royarn.goods.service.impl;
+package com.royarn.goods.service;
 
+import com.alibaba.dubbo.config.annotation.Service;
+import com.royarn.api.entity.Good;
+import com.royarn.api.intf.GoodService;
 import com.royarn.goods.dao.GoodMapper;
-import com.royarn.goods.entity.Good;
 import com.royarn.goods.entity.GoodExample;
-import com.royarn.goods.service.GoodService;
 import com.royarn.goods.support.BusinessException;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -42,6 +42,7 @@ public class GoodServiceImpl implements GoodService {
     }
 
     @Override
+    @Transactional(isolation = Isolation.REPEATABLE_READ, rollbackFor = BusinessException.class)
     public int insert(Good good) {
         GoodExample example = new GoodExample();
         GoodExample.Criteria criteria = example.createCriteria();

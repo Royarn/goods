@@ -1,6 +1,6 @@
 package com.royarn.goods.dao;
 
-import com.royarn.goods.entity.Classify;
+import com.royarn.api.entity.Classify;
 import com.royarn.goods.entity.ClassifyExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;

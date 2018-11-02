@@ -1,11 +1,11 @@
-package com.royarn.goods.service.impl;
+package com.royarn.goods.service;
 
+import com.alibaba.dubbo.config.annotation.Service;
+import com.royarn.api.entity.Shop;
+import com.royarn.api.intf.ShopService;
 import com.royarn.goods.dao.ShopMapper;
-import com.royarn.goods.entity.Shop;
 import com.royarn.goods.entity.ShopExample;
-import com.royarn.goods.service.ShopService;
 import com.royarn.goods.support.BusinessException;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;

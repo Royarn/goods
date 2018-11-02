@@ -1,6 +1,6 @@
 package com.royarn.goods.dao;
 
-import com.royarn.goods.entity.Store;
+import com.royarn.api.entity.Store;
 import com.royarn.goods.entity.StoreExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;

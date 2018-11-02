@@ -1,8 +1,8 @@
 package com.royarn.goods.controller;
 
+import com.royarn.api.entity.Shop;
+import com.royarn.api.intf.ShopService;
 import com.royarn.goods.config.Result;
-import com.royarn.goods.entity.Shop;
-import com.royarn.goods.service.ShopService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;

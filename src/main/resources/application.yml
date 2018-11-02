@@ -38,3 +38,13 @@ management:
         include: "*"
 server:
   port: 8090
+dubbo:
+  application:
+    name: provider
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://192.168.12.149:2181
+  provider:
+    timeout: 1000

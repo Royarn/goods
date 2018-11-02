@@ -1,8 +1,8 @@
 package com.royarn.goods.controller;
 
+import com.royarn.api.entity.Classify;
+import com.royarn.api.intf.ClassifyService;
 import com.royarn.goods.config.Result;
-import com.royarn.goods.entity.Classify;
-import com.royarn.goods.service.ClassifyService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Description:
