@@ -81,6 +81,12 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
+		<!--Apache Kafka -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
 		<!--hot deploy-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -124,9 +130,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.royarn</groupId>
-			<artifactId>api</artifactId>
-			<version>1.0-SNAPSHOT</version>
-			<scope>compile</scope>
+			<artifactId>goods-api</artifactId>
+			<version>1.0</version>
 		</dependency>
 	</dependencies>
 
