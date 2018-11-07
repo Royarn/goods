@@ -46,3 +46,7 @@ dubbo:
     port: 20882
   registry:
     address: zookeeper://192.168.12.149:2181
+mongodb:
+  host: 192.168.12.149
+  port: 27017
+  dataSource: np_config
