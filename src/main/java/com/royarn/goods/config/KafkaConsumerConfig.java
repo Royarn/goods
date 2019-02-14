@@ -25,7 +25,7 @@ import java.util.Map;
 @EnableKafka
 public class KafkaConsumerConfig {
 
-    @Value("192.168.12.149:9092")
+    @Value("192.168.12.148:9092")
     private String server;
 
     @Value("true")

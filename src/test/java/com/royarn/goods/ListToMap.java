@@ -20,7 +20,7 @@ public class ListToMap {
                 new Obj(3, "seven"),
                 new Obj(4, "shadow")).stream()
                 .collect(Collectors.toMap(Obj::getId, a -> a, (k1, k2) -> k1));
-        System.out.println(map.get(1));
+        System.out.println(map);
     }
 }
 

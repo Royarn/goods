@@ -17,7 +17,7 @@
         <property name="endingDelimiter" value="`" />
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/goods?generateSimpleParameterMetadata=true"
+                        connectionURL="jdbc:mysql://localhost:3306/np_config?generateSimpleParameterMetadata=true"
                         userId="root" password="123456">
         </jdbcConnection>
 
@@ -45,17 +45,34 @@
             <property name="exampleMethodVisibility" value="public"/>
         </javaClientGenerator>
 
-        <table  tableName="t_good" domainObjectName="Good">
+        <!--<table  tableName="t_good" domainObjectName="Good">-->
+            <!--<ignoreColumn column="modify_time" />-->
+        <!--</table>-->
+        <!--<table  tableName="t_shop" domainObjectName="Shop">-->
+            <!--<ignoreColumn column="modify_time" />-->
+        <!--</table>-->
+        <!--<table  tableName="t_store" domainObjectName="Store">-->
+            <!--<ignoreColumn column="modify_time" />-->
+        <!--</table>-->
+        <!--<table  tableName="t_classify" domainObjectName="Classify">-->
+            <!--<ignoreColumn column="modify_time" />-->
+        <!--</table>-->
+
+        <table  tableName="other_groups" domainObjectName="Group">
+           <ignoreColumn column="modify_time" />
+       </table>
+
+        <table  tableName="dev_device" domainObjectName="Device">
+            <columnOverride column="id" jdbcType="CHAR" javaType="java.util.UUID"/>
+            <columnOverride column="pau_service_id" jdbcType="CHAR" javaType="java.util.UUID"/>
             <ignoreColumn column="modify_time" />
         </table>
-        <table  tableName="t_shop" domainObjectName="Shop">
-            <ignoreColumn column="modify_time" />
-        </table>
-        <table  tableName="t_store" domainObjectName="Store">
-            <ignoreColumn column="modify_time" />
-        </table>
-        <table  tableName="t_classify" domainObjectName="Classify">
-            <ignoreColumn column="modify_time" />
-        </table>
-    </context>
+
+       <table  tableName="dev_device_camera" domainObjectName="Camera">
+           <columnOverride column="node_id" jdbcType="CHAR" javaType="java.util.UUID"/>
+           <columnOverride column="device_type" jdbcType="CHAR" javaType="java.lang.Integer"/>
+           <columnOverride column="relation_id" jdbcType="CHAR" javaType="java.util.UUID"/>
+           <ignoreColumn column="modify_time" />
+       </table>
+   </context>
 </generatorConfiguration>
