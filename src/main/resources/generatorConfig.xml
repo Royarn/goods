@@ -63,15 +63,10 @@
        </table>
 
         <table  tableName="dev_device" domainObjectName="Device">
-            <columnOverride column="id" jdbcType="CHAR" javaType="java.util.UUID"/>
-            <columnOverride column="pau_service_id" jdbcType="CHAR" javaType="java.util.UUID"/>
             <ignoreColumn column="modify_time" />
         </table>
 
        <table  tableName="dev_device_camera" domainObjectName="Camera">
-           <columnOverride column="node_id" jdbcType="CHAR" javaType="java.util.UUID"/>
-           <columnOverride column="device_type" jdbcType="CHAR" javaType="java.lang.Integer"/>
-           <columnOverride column="relation_id" jdbcType="CHAR" javaType="java.util.UUID"/>
            <ignoreColumn column="modify_time" />
        </table>
    </context>
