@@ -1,6 +1,8 @@
 package com.royarn.goods;
 
-import com.alibaba.fastjson.JSON;
+import com.royarn.goods.config.BeanConfig;
+import com.royarn.goods.service.GeneralService;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -21,6 +23,9 @@ public class ListToMap {
                 new Obj(4, "shadow")).stream()
                 .collect(Collectors.toMap(Obj::getId, a -> a, (k1, k2) -> k1));
         System.out.println(map);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
+        GeneralService service = (GeneralService) context.getBean("service");
+        System.out.println(service.qryData());
     }
 }
 
